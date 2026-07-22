@@ -30,7 +30,7 @@ The site presents engineering experience, technical projects, development practi
 - Content: MDX, gray-matter, next-mdx-remote
 - UI: Radix UI, shadcn-style components, Lucide React, Tabler Icons
 - Motion: Motion and CSS transitions
-- Data and integrations: GitHub REST API, GitHub contribution API, optional Upstash Redis support
+- Data and integrations: GitHub REST API and GitHub contribution API
 - Tooling: ESLint, Prettier, Jest, TypeScript
 
 ## Project Structure
@@ -41,7 +41,7 @@ src/
 ├── components/          Shared UI, navigation, project, profile, and content components
 ├── constants/           Project and portfolio data
 ├── content/posts/       MDX articles and frontmatter
-├── lib/                 GitHub, MDX, project, Redis, and utility helpers
+├── lib/                 GitHub, MDX, project, and utility helpers
 └── types/               Shared TypeScript types
 
 public/
@@ -80,12 +80,6 @@ npm run lint      # Run Next.js linting
 
 Set `NEXT_PUBLIC_SITE_URL` in `.env.local` when deploying behind a custom domain. The application uses GitHub APIs for profile and contribution data. The contribution endpoint can be overridden with `GITHUB_CONTRIBUTIONS_API_URL`.
 
-If Redis-backed functionality is enabled, configure:
-
-```env
-UPSTASH_REDIS_REST_URL=your_upstash_rest_url
-UPSTASH_REDIS_REST_TOKEN=your_upstash_rest_token
-```
 
 Do not commit `.env.local`, credentials, access tokens, or private user data.
 
