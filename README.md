@@ -1,118 +1,109 @@
-<p align="center">
-  <img src="./public/images/readme-banner.png" alt="Aman Sagar portfolio banner" />
-</p>
+# Jay Rana — Portfolio
 
-# amansagar.in
+A production-oriented personal portfolio for Jay Rana, a Full Stack Developer and Backend-Focused Engineer based in New Delhi, India.
 
-<p align="center">
-  <a href="#readme">README</a> ·
-  <a href="#code-of-conduct">Code of conduct</a> ·
-  <a href="#mit-license">MIT license</a>
-</p>
+The site presents engineering experience, technical projects, development practices, and external technical writing through a responsive dark interface. It is designed as a content-driven Next.js application rather than a static landing page: project data, experience, metadata, and MDX content are maintained in source-controlled modules.
 
-<p align="center">
-  <a href="https://amansagar.in">Live site</a> ·
-  <a href="https://github.com/AmanSagar0607/amansagar.in">GitHub repository</a>
-</p>
+## Features
 
-<p align="center">
-  <a href="https://github.com/sponsors/AmanSagar0607">
-    <img
-      src="https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-30363D?style=flat-square&logo=githubsponsors&logoColor=EA4AAA"
-      alt="Sponsor on GitHub Sponsors"
-    />
-  </a>
-</p>
+- Responsive dark-theme portfolio with motion and interaction details
+- Profile, stack, experience, projects, blog, socials, and contact sections
+- Project grid and list views with local project imagery
+- Dedicated project detail routes
+- MDX-powered writing archive with support for external article links
+- GitHub profile and contribution activity integration
+- SEO metadata, Open Graph image generation, robots.txt, and sitemap generation
+- Accessible desktop navigation, mobile dock, command menu, and theme switching
+- Reusable UI primitives built with Radix UI, shadcn-style patterns, and Tailwind CSS
 
-<p align="center">
-  <img src="https://img.shields.io/badge/next.js-15.3.8-black?logo=nextdotjs" alt="Next.js" />
-  <img src="https://img.shields.io/badge/typescript-5.x-3178C6?logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/mdx-enabled-000000?logo=mdx" alt="MDX" />
-  <img src="https://img.shields.io/badge/tailwindcss-v4-38B2AC?logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/shadcn-ui-111827?logo=shadcnui&logoColor=white" alt="shadcn/ui" />
-</p>
+## Featured Projects
 
-<p align="center">
-  <img src="https://img.shields.io/badge/sections-5-111827" alt="Sections" />
-  <img src="https://img.shields.io/badge/content-mdx-111827" alt="Content" />
-  <img src="https://img.shields.io/badge/status-active-success" alt="Status" />
-</p>
+- [NOVO](https://github.com/Jayant9917/qaz) — Owner-controlled Personal AI Operating System with a backend-authoritative Control Center and desktop assistant direction.
+- [Rabbit](https://github.com/Jayant9917/E-comm) — Full-stack e-commerce platform with catalog, cart, admin, authentication, payments, and email workflows.
+- [Shivay Finance and Services](https://github.com/Jayant9917/Financial-App) — SEO-focused financial services website for home loans and related finance solutions. [Live website](https://www.shivayfinanceandservices.com/)
+- [Coursify](https://github.com/Jayant9917/coursify) — Role-based learning platform for students, instructors, and administrators.
 
-<p align="center">
-  <img src="https://img.shields.io/github/stars/AmanSagar0607/amansagar.in?style=flat&label=Stars" alt="GitHub stars" />
-  <img src="https://img.shields.io/github/forks/AmanSagar0607/amansagar.in?style=flat&label=Forks" alt="GitHub forks" />
-  <img src="https://img.shields.io/github/last-commit/AmanSagar0607/amansagar.in?style=flat&label=Last%20commit" alt="Last commit" />
-</p>
+## Technology Stack
 
-![Repobeats analytics image](https://repobeats.axiom.co/api/embed/8fb16e60f10775eadf113e3bb515849e2cc60449.svg "Repobeats analytics image")
+- Framework: Next.js 15, React 19, TypeScript
+- Styling: Tailwind CSS, CSS variables, custom responsive styles
+- Content: MDX, gray-matter, next-mdx-remote
+- UI: Radix UI, shadcn-style components, Lucide React, Tabler Icons
+- Motion: Motion and CSS transitions
+- Data and integrations: GitHub REST API, GitHub contribution API, optional Upstash Redis support
+- Tooling: ESLint, Prettier, Jest, TypeScript
 
-A personal portfolio for [amansagar.in](https://amansagar.in), built with Next.js, MDX, Tailwind CSS, and shadcn/ui.
+## Project Structure
 
-## About
+```text
+src/
+├── app/                 Next.js routes, metadata, APIs, and global styles
+├── components/          Shared UI, navigation, project, profile, and content components
+├── constants/           Project and portfolio data
+├── content/posts/       MDX articles and frontmatter
+├── lib/                 GitHub, MDX, project, Redis, and utility helpers
+└── types/               Shared TypeScript types
 
-This repo is meant to be used as a reference, a fork, or a starting point for your own portfolio.
+public/
+├── images/projects/     Project screenshots and presentation assets
+└── ...                  Favicon, avatar, and static assets
+```
 
-## Topics
+## Local Development
 
-`nextjs` `portfolio` `mdx` `tailwindcss` `shadcn-ui` `typescript` `blog` `design-system`
+### Requirements
 
-## Tech Stack
+- Node.js 20 or newer
+- npm
 
-- Next.js
-- TypeScript
-- MDX
-- Tailwind CSS
-- shadcn/ui
-
-## Featured
-
-- Blog, projects, experience, and contact sections
-- MDX-powered writing and content pages
-- Responsive navigation and section-based layout
-- Reusable UI patterns for cards, lists, and content panels
-- Built for easy customization and experimentation
-
-## Use This
-
-1. Clone the repository.
-2. Install dependencies with `npm install`.
-3. Run the development server with `npm run dev`.
-4. Replace links, images, metadata, and personal details with your own.
-5. Update `src/app/page.tsx`, `src/content/posts`, and shared components as needed.
-
-## Contribute
-
-Contributions are welcome if you want to improve the template, fix bugs, or polish the UI.
-
-If you use this project as a base for your own site, a credit link back to the original repository is appreciated.
-
-## Support
-
-- Sponsor the project through [GitHub Sponsors](https://github.com/sponsors/AmanSagar0607)
-- Share feedback through issues or pull requests
-
-## Contributors
-
-- [Aman Sagar](https://github.com/AmanSagar0607)
-
-## Development
+### Setup
 
 ```bash
+git clone https://github.com/Jayant9917/Portfolio.git
+cd Portfolio
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to preview the site.
+Open [http://localhost:3000](http://localhost:3000) in a browser.
+
+### Available Commands
+
+```bash
+npm run dev       # Start the development server
+npm run build     # Create a production build
+npm run start     # Start the production server
+npm run lint      # Run Next.js linting
+```
+
+## Configuration
+
+Set `NEXT_PUBLIC_SITE_URL` in `.env.local` when deploying behind a custom domain. The application uses GitHub APIs for profile and contribution data. The contribution endpoint can be overridden with `GITHUB_CONTRIBUTIONS_API_URL`.
+
+If Redis-backed functionality is enabled, configure:
+
+```env
+UPSTASH_REDIS_REST_URL=your_upstash_rest_url
+UPSTASH_REDIS_REST_TOKEN=your_upstash_rest_token
+```
+
+Do not commit `.env.local`, credentials, access tokens, or private user data.
+
+## Updating Content
+
+- Profile, stack, experience, and social links: `src/app/page.tsx`
+- Project entries: `src/constants/projects.ts`
+- Project images: `public/images/projects/`
+- Blog posts: `src/content/posts/`
+- Site-wide metadata: `src/app/layout.tsx`
+- Shared visual system: `src/app/globals.css`
 
 ## License
 
-Released under the MIT License. See [`LICENSE`](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
 
-## Code of Conduct
+## Contact
 
-Be respectful, constructive, and helpful. Keep feedback focused on the work, and avoid harassment, hate, or abusive behavior.
-
-## Related
-
-- Live site: [amansagar.in](https://amansagar.in)
-- GitHub: [AmanSagar0607/amansagar.in](https://github.com/AmanSagar0607/amansagar.in)
+- GitHub: [Jayant9917](https://github.com/Jayant9917)
+- LinkedIn: [Jayant Pratap Singh](https://www.linkedin.com/in/jayant-pratap-singh/)
+- Medium: [@ranajayant527](https://medium.com/@ranajayant527)

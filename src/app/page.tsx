@@ -180,7 +180,7 @@ export default async function Home() {
             <div className="hero-stage-avatar">
               <div className="hero-stage-avatar-inner">
                 <Image
-                  src="/aman-avatar.webp"
+                  src="/R.png"
                   alt="Jayant Pratap Singh"
                   fill
                   priority

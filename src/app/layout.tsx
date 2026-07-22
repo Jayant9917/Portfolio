@@ -52,9 +52,8 @@ export const metadata: Metadata = {
   publisher: "Jayant Pratap Singh",
   alternates: { canonical: "/" },
   icons: {
-    icon: "/aman-favicon.ico",
-    shortcut: "/aman-favicon.ico",
-    apple: "/aman-avatar.webp",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
   },
   openGraph: {
     title: "Jayant Pratap Singh | Full Stack Developer | Backend-Focused Engineer",
