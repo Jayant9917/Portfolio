@@ -10,6 +10,7 @@ interface BlogPost {
     title: string;
     date: string;
     readTime?: string;
+    externalUrl?: string;
   };
 }
 
@@ -50,7 +51,9 @@ export default async function BlogPage() {
               </div>
               <div className="list-grid">
                 {yearPosts.map((post) => (
-                  <Link key={post.slug} href={`/blog/${post.slug}`} className="screen-line-bottom list-row">
+                  <Link key={post.slug} href={post.frontmatter.externalUrl ?? `/blog/${post.slug}`} target={post.frontmatter.externalUrl ? "_blank" : undefined}
+                    rel={post.frontmatter.externalUrl ? "noreferrer" : undefined}
+                    className="screen-line-bottom list-row">
                     <div className="flex items-start gap-3">
                       <NotebookPen className="mt-1 h-4 w-4 text-muted-foreground" />
                       <span className="list-row-title">{post.frontmatter.title}</span>

@@ -5,7 +5,7 @@ export const Footer = () => (
     <div className="site-wordmark-section" aria-hidden>
       <div className="site-wordmark-wrap">
         <FluidGradientText
-          text="Jayant Pratap Singh"
+          text="Jay Rana"
           svgViewBoxWidth={1400}
           svgViewBoxHeight={340}
         />
@@ -13,7 +13,7 @@ export const Footer = () => (
     </div>
     <div className="screen-line-top footer-meta">
       <p>Last updated · Jul 7, 2026</p>
-      <p>&copy; {new Date().getFullYear()} Jayant Pratap Singh</p>
+      <p>&copy; {new Date().getFullYear()} Jay Rana</p>
     </div>
   </footer>
 );

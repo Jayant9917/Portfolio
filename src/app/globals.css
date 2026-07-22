@@ -1353,7 +1353,18 @@ body {
 
   .profile-detail-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "focus current"
+      "location availability"
+      "github email";
   }
+
+  .profile-detail-row:nth-child(1) { grid-area: focus; }
+  .profile-detail-row:nth-child(2) { grid-area: current; }
+  .profile-detail-row:nth-child(3) { grid-area: location; }
+  .profile-detail-row:nth-child(4) { grid-area: availability; }
+  .profile-detail-row:nth-child(5) { grid-area: github; }
+  .profile-detail-row:nth-child(6) { grid-area: email; }
 
   .profile-detail-row:nth-child(2) {
     border-top: 0;

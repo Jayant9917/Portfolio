@@ -59,6 +59,7 @@ type BlogPostFrontmatter = {
   title: string;
   date: string;
   readTime?: string;
+  externalUrl?: string;
 };
 
 type BlogPost = Omit<MDXFile, "frontmatter"> & {
@@ -86,12 +87,12 @@ const techStack: { label: string; items: StackItem[] }[] = [
   ] },
   { label: "Frontend", items: [
     { label: "React.js", icon: simpleIcon(siReact) }, { label: "Next.js", icon: simpleIcon(siNextdotjs) },
-    { label: "Tailwind CSS", icon: simpleIcon(siTailwindcss) }, { label: "HTML", icon: badgeIcon("HTML") }, { label: "CSS", icon: badgeIcon("CSS") },
+    { label: "Tailwind CSS", icon: simpleIcon(siTailwindcss) }, { label: "HTML", icon: badgeIcon("HTML") }, { label: "CSS", icon: badgeIcon("CSS") }, { label: "shadcn/ui", icon: simpleIcon(siShadcnui) }, { label: "React Bits", icon: badgeIcon("RB") },
   ] },
   { label: "Backend & Databases", items: [
     { label: "Node.js", icon: simpleIcon(siNodedotjs) }, { label: "Express.js", icon: badgeIcon("EX") },
     { label: "PostgreSQL", icon: simpleIcon(siPostgresql) }, { label: "MongoDB", icon: simpleIcon(siMongodb) },
-    { label: "MySQL", icon: badgeIcon("SQL") }, { label: "REST APIs", icon: badgeIcon("API") },
+    { label: "MySQL", icon: badgeIcon("SQL") }, { label: "REST APIs", icon: badgeIcon("API") }, { label: "Redis", icon: simpleIcon(siRedis) }, { label: "nginx", icon: simpleIcon(siNginx) },
   ] },
   { label: "Infrastructure & Security", items: [
     { label: "Docker", icon: simpleIcon(siDocker) }, { label: "Microsoft IIS", icon: badgeIcon("IIS") },
@@ -99,10 +100,11 @@ const techStack: { label: string; items: StackItem[] }[] = [
     { label: "OWASP ZAP", icon: badgeIcon("ZAP") }, { label: "Burp Suite", icon: badgeIcon("BURP") }, { label: "Nmap", icon: badgeIcon("NMAP") },
     { label: "Git", icon: simpleIcon(siGit) }, { label: "GitHub", icon: simpleIcon(siGithub) },
   ] },
-  { label: "Engineering", items: [
-    { label: "System Design", icon: badgeIcon("SD") }, { label: "Object-Oriented Programming", icon: badgeIcon("OOP") },
-    { label: "Database Design", icon: badgeIcon("DB") }, { label: "Database Normalization", icon: badgeIcon("NORM") },
-    { label: "Computer Networking", icon: badgeIcon("NET") }, { label: "Web Application Security", icon: badgeIcon("SEC") },
+  { label: "Workflow & AI", items: [
+    { label: "Cursor", icon: simpleIcon(siCursor) }, { label: "Claude", icon: simpleIcon(siClaude) },
+    { label: "Gemini", icon: simpleIcon(siGooglegemini) }, { label: "ChatGPT", icon: tablerIcon(IconBrandOpenai) },
+    { label: "Git", icon: simpleIcon(siGit) }, { label: "GitHub", icon: simpleIcon(siGithub) },
+    { label: "Docker", icon: simpleIcon(siDocker) }, { label: "Vercel", icon: simpleIcon(siVercel) },
   ] },
 ];
 const experiences: ExperienceItemType[] = [
@@ -118,6 +120,7 @@ const experiences: ExperienceItemType[] = [
   }] },
 ];
 const socialLinks = [
+  { label: "Email", handle: "ranajayant527@gmail.com", href: "mailto:ranajayant527@gmail.com" },
   {
     label: "GitHub", handle: "@Jayant9917", href: "https://github.com/Jayant9917",
   },
@@ -131,34 +134,13 @@ const socialLinks = [
 ];
 
 const profileDetails = [
-  {
-    label: "Focus",
-    value: "Backend Engineering",
-    icon: Sparkles,
-  },
-  {
-    label: "Current",
-    value: "Full Stack Engineer",
-    icon: Code2,
-  },
-  {
-    label: "Location",
-    value: "New Delhi, India",
-    icon: MapPin,
-  },
-  {
-    label: "Availability",
-    value: "Open to opportunities",
-    icon: Clock3,
-  },
-  {
-    label: "GitHub",
-    value: "Jayant9917",
-    href: "https://github.com/Jayant9917",
-    icon: Github,
-  },
+  { label: "Focus", value: "Backend Engineering", icon: Sparkles },
+  { label: "Current", value: "Full Stack Engineer", icon: Code2 },
+  { label: "Location", value: "New Delhi, India", icon: MapPin },
+  { label: "Availability", value: "Open to opportunities", icon: Clock3 },
+  { label: "GitHub", value: "Jayant9917", href: "https://github.com/Jayant9917", icon: Github },
+  { label: "Email", value: "ranajayant527@gmail.com", href: "mailto:ranajayant527@gmail.com", icon: Mail },
 ];
-
 const GITHUB_USERNAME = "Jayant9917";
 const GITHUB_PROFILE_URL = "https://github.com/Jayant9917";
 
@@ -366,7 +348,9 @@ export default async function Home() {
           {posts.map((post) => (
             <Link
               key={post.slug}
-              href={`/blog/${post.slug}`}
+              href={post.frontmatter.externalUrl ?? `/blog/${post.slug}`}
+              target={post.frontmatter.externalUrl ? "_blank" : undefined}
+              rel={post.frontmatter.externalUrl ? "noreferrer" : undefined}
               className="screen-line-bottom list-row"
             >
               <div className="flex items-start gap-3">

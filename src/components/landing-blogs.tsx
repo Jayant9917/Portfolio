@@ -9,6 +9,7 @@ interface BlogPostFrontmatter {
   date: string;
   description?: string;
   tags?: string[];
+  externalUrl?: string;
 }
 
 interface BlogPost extends Omit<MDXFile, 'frontmatter'> {
@@ -87,7 +88,9 @@ export const LandingBlogs: React.FC<LandingBlogsProps> = async () => {
                     <h3 className="text-base font-medium tracking-tight text-neutral-900 dark:text-neutral-100">
                       <Dot className="-ml-5.5 sm:hidden" />
                       <Link
-                        href={`/blog/${post.slug}`}
+                        href={post.frontmatter.externalUrl ?? `/blog/${post.slug}`}
+                        target={post.frontmatter.externalUrl ? "_blank" : undefined}
+                        rel={post.frontmatter.externalUrl ? "noreferrer" : undefined}
                         className="hover:text-neutral-600 dark:hover:text-neutral-300"
                       >
                         {post.frontmatter.title}
