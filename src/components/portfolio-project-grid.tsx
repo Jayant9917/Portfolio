@@ -142,7 +142,7 @@ export function PortfolioProjectGrid({
                   alt={project.title}
                   fill
                   sizes="(min-width: 640px) 24rem, 100vw"
-                  className="project-cover object-cover object-top"
+                  className={cn("project-cover", project.title === "NOVO" ? "object-contain object-center" : "object-cover object-top")}
                 />
               </Link>
 

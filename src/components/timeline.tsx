@@ -31,7 +31,7 @@ export default function TimelinePage() {
       title: "MERN Stack Developer",
       company: "UPSALA DEFSOL",
       description: "Built modular client-facing applications and worked across UI, APIs, and deployment flows.",
-      date: "Apr 2025 - Present",
+      date: "Aug 2025 - Oct 2025",
       location: "Indore, MP",
       type: 'work'
     },
