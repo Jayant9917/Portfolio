@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeader } from "@/components/page-header";
-import { TallyForm } from "@/components/tally-form";
+import { ArrowUpRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -39,7 +39,42 @@ export default function ContactPage() {
         />
         <div className="relative left-1/2 w-screen -translate-x-1/2 border-t border-[#e7e7e7] dark:border-[#1c1c1c]" />
         <div className="p-4">
-          <TallyForm />
+          <div className="social-grid">
+            <Link
+              href="tel:7819016236"
+              className="screen-line-bottom social-link"
+            >
+              <span className="social-label">Phone</span>
+              <span className="social-handle">7819016236</span>
+              <ArrowUpRight className="text-muted-foreground ml-auto h-4 w-4" />
+            </Link>
+            <Link
+              href="mailto:ranajayant527@gmail.com"
+              className="screen-line-bottom social-link"
+            >
+              <span className="social-label">Email</span>
+              <span className="social-handle">ranajayant527@gmail.com</span>
+              <ArrowUpRight className="text-muted-foreground ml-auto h-4 w-4" />
+            </Link>
+            <Link
+              href="https://github.com/Jayant9917"
+              target="_blank"
+              className="screen-line-bottom social-link"
+            >
+              <span className="social-label">GitHub</span>
+              <span className="social-handle">@Jayant9917</span>
+              <ArrowUpRight className="text-muted-foreground ml-auto h-4 w-4" />
+            </Link>
+            <Link
+              href="https://www.linkedin.com/in/jayant-pratap-singh/"
+              target="_blank"
+              className="screen-line-bottom social-link"
+            >
+              <span className="social-label">LinkedIn</span>
+              <span className="social-handle">/in/jayant-pratap-singh</span>
+              <ArrowUpRight className="text-muted-foreground ml-auto h-4 w-4" />
+            </Link>
+          </div>
         </div>
       </section>
     </main>

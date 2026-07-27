@@ -1289,6 +1289,13 @@ body {
   margin-inline: auto;
 }
 
+.footer-attribution {
+  margin-top: 0.45rem;
+  color: var(--muted-foreground);
+  font-size: 0.65rem;
+  text-align: center;
+}
+
 .footer-meta {
   display: flex;
   align-items: center;

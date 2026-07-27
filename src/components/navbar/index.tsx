@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { CommandMenu } from "@/components/command-menu";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
 import { IconArrowUpRight, IconBrandGithub } from "@tabler/icons-react";
@@ -35,7 +35,6 @@ const moreNavItems = [
 
 export const Navbar = () => {
   const pathname = usePathname();
-  const router = useRouter();
   const isHome = pathname === "/";
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
@@ -46,30 +45,20 @@ export const Navbar = () => {
   };
 
   const handleMoreNavigation = (href: string, external?: boolean) => {
-    if (external) {
-      window.open(href, "_blank", "noopener,noreferrer");
-      return;
-    }
+    window.setTimeout(() => {
+      if (external) {
+        window.open(href, "_blank", "noopener,noreferrer");
+        return;
+      }
 
-    if (href.startsWith("/#")) {
-      const id = href.slice(2);
-
-      if (pathname === "/") {
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
-          window.history.replaceState(null, "", href);
-          return;
-        }
+      if (href.startsWith("/#") && pathname === "/") {
+        window.location.hash = href.slice(2);
+        return;
       }
 
       window.location.href = href;
-      return;
-    }
-
-    router.push(href);
+    }, 120);
   };
-
   return (
     <header className="site-header animate-slide-in slide-in-from-top-10 sticky top-0 z-50 hidden xl:block">
       <div className="site-header-shell">
@@ -105,6 +94,7 @@ export const Navbar = () => {
               align="start"
               sideOffset={10}
               className="border-border bg-card min-w-44 rounded-2xl border p-2 shadow-sm"
+              onCloseAutoFocus={(event) => event.preventDefault()}
             >
               {moreNavItems.map((item) => (
                 <DropdownMenuItem

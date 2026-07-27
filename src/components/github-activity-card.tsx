@@ -40,15 +40,16 @@ export function GitHubActivityCard({
         </p>
         <div className="hero-cta-actions">
           <Link
-            href="https://github.com/Jayant9917"
-            target="_blank"
+            href="tel:7819016236"
             className="hero-cta-button hero-cta-button-primary"
           >
             <CalendarDays className="h-4 w-4" />
             Book an intro call
           </Link>
           <Link
-            href="https://github.com/Jayant9917"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=ranajayant527@gmail.com"
+            target="_blank"
+            rel="noreferrer"
             className="hero-cta-button"
           >
             <Mail className="h-4 w-4" />

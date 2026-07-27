@@ -416,20 +416,7 @@ export default async function Home() {
         </div>
       </section>
 
-      <div className="stripe-divider" />
-
-      <section id="connect" className="page-section">
-        <div className="section-bar screen-line-top screen-line-bottom">
-          <h2 className="section-title">Connect</h2>
-          <span className="mono-note">Interested in building something meaningful?</span>
-        </div>
-        <div className="section-copy">Explore my projects, read my technical writing, or connect with me.</div>
-        <div className="flex flex-wrap gap-3 p-4">
-          <Link href="https://github.com/Jayant9917" target="_blank" className="bg-primary text-primary-foreground inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium">View GitHub <ArrowUpRight className="h-4 w-4" /></Link>
-          <Link href="https://www.linkedin.com/in/jayant-pratap-singh/" target="_blank" className="border-border inline-flex items-center gap-2 rounded-lg border px-3 py-2 text-sm font-medium">Connect on LinkedIn <ArrowUpRight className="h-4 w-4" /></Link>
-          <Link href="https://medium.com/@ranajayant527" target="_blank" className="border-border inline-flex items-center gap-2 rounded-lg border px-3 py-2 text-sm font-medium">Read my writing <ArrowUpRight className="h-4 w-4" /></Link>
-        </div>
-      </section>    </main>
+    </main>
   );
 }
 
