@@ -15,7 +15,7 @@ const navItems = [
   { title: "Blog", href: "/blog" },
   { title: "About", href: "/about" },
   { title: "Contact", href: "/contact" },
-  { title: "Resume", href: "https://drive.google.com/file/d/1flNfObtr9q55WtIA5DJRZLEkj_Trsw7-/view?usp=sharing", external: true },
+  { title: "Resume", href: "/Jayant_Pratap_Resume.pdf", external: true },
 ]
 
 export function MobileDock() {
