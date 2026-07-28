@@ -94,7 +94,6 @@ const techStack: { label: string; items: StackItem[] }[] = [
   { label: "Workflow & AI", items: [
     { label: "Cursor", icon: simpleIcon(siCursor) }, { label: "Claude", icon: simpleIcon(siClaude) },
     { label: "Gemini", icon: simpleIcon(siGooglegemini) }, { label: "ChatGPT", icon: tablerIcon(IconBrandOpenai) },
-    { label: "Git", icon: simpleIcon(siGit) }, { label: "GitHub", icon: simpleIcon(siGithub) },
     { label: "Docker", icon: simpleIcon(siDocker) }, { label: "Vercel", icon: simpleIcon(siVercel) },
   ] },
 ];
