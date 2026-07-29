@@ -1289,6 +1289,10 @@ body {
   margin-inline: auto;
 }
 
+.footer-attribution a:hover {
+  text-decoration: underline;
+}
+
 .footer-attribution {
   margin-top: 0.45rem;
   color: var(--muted-foreground);

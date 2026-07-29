@@ -16,13 +16,19 @@ import {
   type TablerIcon,
 } from "@tabler/icons-react";
 import {
+  siBurpsuite,
   siClaude,
+  siCss,
   siCursor,
   siDocker,
+  siExpress,
   siGit,
   siGooglegemini,
   siGithub,
+  siHtml5,
+  siJavascript,
   siMongodb,
+  siMysql,
   siNextdotjs,
   siNodedotjs,
   siNginx,
@@ -32,7 +38,9 @@ import {
   siRedis,
   siShadcnui,
   siTailwindcss,
+  siTypescript,
   siVercel,
+  siZap,
   type SimpleIcon,
 } from "simple-icons";
 import { GitHubActivityCard } from "@/components/github-activity-card";
@@ -73,28 +81,28 @@ const badgeIcon = (label: string): StackIcon => ({ type: "badge", label });
 
 const techStack: { label: string; items: StackItem[] }[] = [
   { label: "Languages", items: [
-    { label: "JavaScript", icon: badgeIcon("JS") }, { label: "TypeScript", icon: badgeIcon("TS") },
+    { label: "JavaScript", icon: simpleIcon(siJavascript) }, { label: "TypeScript", icon: simpleIcon(siTypescript) },
     { label: "Python", icon: simpleIcon(siPython) }, { label: "SQL", icon: badgeIcon("SQL") },
   ] },
   { label: "Frontend", items: [
     { label: "React.js", icon: simpleIcon(siReact) }, { label: "Next.js", icon: simpleIcon(siNextdotjs) },
-    { label: "Tailwind CSS", icon: simpleIcon(siTailwindcss) }, { label: "HTML", icon: badgeIcon("HTML") }, { label: "CSS", icon: badgeIcon("CSS") }, { label: "shadcn/ui", icon: simpleIcon(siShadcnui) }, { label: "React Bits", icon: badgeIcon("RB") },
+    { label: "Tailwind CSS", icon: simpleIcon(siTailwindcss) }, { label: "HTML", icon: simpleIcon(siHtml5) }, { label: "CSS", icon: simpleIcon(siCss) }, { label: "shadcn/ui", icon: simpleIcon(siShadcnui) }, { label: "React Bits", icon: badgeIcon("RB") },
   ] },
   { label: "Backend & Databases", items: [
-    { label: "Node.js", icon: simpleIcon(siNodedotjs) }, { label: "Express.js", icon: badgeIcon("EX") },
+    { label: "Node.js", icon: simpleIcon(siNodedotjs) }, { label: "Express.js", icon: simpleIcon(siExpress) },
     { label: "PostgreSQL", icon: simpleIcon(siPostgresql) }, { label: "MongoDB", icon: simpleIcon(siMongodb) },
-    { label: "MySQL", icon: badgeIcon("SQL") }, { label: "REST APIs", icon: badgeIcon("API") }, { label: "Redis", icon: simpleIcon(siRedis) }, { label: "nginx", icon: simpleIcon(siNginx) },
+    { label: "MySQL", icon: simpleIcon(siMysql) }, { label: "REST APIs", icon: badgeIcon("API") }, { label: "Redis", icon: simpleIcon(siRedis) }, { label: "nginx", icon: simpleIcon(siNginx) },
   ] },
   { label: "Infrastructure & Security", items: [
     { label: "Docker", icon: simpleIcon(siDocker) }, { label: "Microsoft IIS", icon: badgeIcon("IIS") },
-    { label: "HTTPS", icon: badgeIcon("HTTPS") }, { label: "TLS", icon: badgeIcon("TLS") }, { label: "SSL/TLS", icon: badgeIcon("SSL") },
-    { label: "OWASP ZAP", icon: badgeIcon("ZAP") }, { label: "Burp Suite", icon: badgeIcon("BURP") }, { label: "Nmap", icon: badgeIcon("NMAP") },
+    { label: "HTTPS", icon: badgeIcon("WEB") }, { label: "TLS", icon: badgeIcon("SEC") }, { label: "SSL/TLS", icon: badgeIcon("CERT") },
+    { label: "OWASP ZAP", icon: simpleIcon(siZap) }, { label: "Burp Suite", icon: simpleIcon(siBurpsuite) }, { label: "Nmap", icon: badgeIcon("NMAP") },
     { label: "Git", icon: simpleIcon(siGit) }, { label: "GitHub", icon: simpleIcon(siGithub) },
   ] },
   { label: "Workflow & AI", items: [
     { label: "Cursor", icon: simpleIcon(siCursor) }, { label: "Claude", icon: simpleIcon(siClaude) },
     { label: "Gemini", icon: simpleIcon(siGooglegemini) }, { label: "ChatGPT", icon: tablerIcon(IconBrandOpenai) },
-    { label: "Docker", icon: simpleIcon(siDocker) }, { label: "Vercel", icon: simpleIcon(siVercel) },
+    { label: "Vercel", icon: simpleIcon(siVercel) },
   ] },
 ];
 const experiences: ExperienceItemType[] = [

@@ -15,6 +15,6 @@ export const Footer = () => (
       <p>Last updated · Jul 7, 2026</p>
       <p>&copy; {new Date().getFullYear()} Jay Rana</p>
     </div>
-    <p className="footer-attribution">Inspired by Aman Sagar&apos;s original portfolio design.</p>
+    <p className="footer-attribution">Inspired by <a href="https://www.amansagar.in/" target="_blank" rel="noreferrer">Aman Sagar</a>&apos;s original portfolio design.</p>
   </footer>
 );
