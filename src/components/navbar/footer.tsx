@@ -12,7 +12,7 @@ export const Footer = () => (
       </div>
     </div>
     <div className="screen-line-top footer-meta">
-      <p>Last updated · Jul 29, 2026</p>
+      <p>Last updated · Jul 31, 2026</p>
       <p>&copy; {new Date().getFullYear()} Jay Rana</p>
     </div>
     <p className="footer-attribution">Inspired by <a href="https://www.amansagar.in/" target="_blank" rel="noreferrer">Aman Sagar</a>&apos;s original portfolio design.</p>
