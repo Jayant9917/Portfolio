@@ -18,7 +18,7 @@ The site presents engineering experience, technical projects, development practi
 
 ## Featured Projects
 
-- [NOVO](https://github.com/Jayant9917/qaz) — Owner-controlled Personal AI Operating System with a backend-authoritative Control Center and desktop assistant direction.
+- [DocEngine](https://github.com/Jayant9917/DocEngine) — Distributed CSV-to-PDF processing platform with asynchronous workers, tenant isolation, object storage, and production monitoring. [Live app](https://docengine1.vercel.app/)
 - [Rabbit](https://github.com/Jayant9917/E-comm) — Full-stack e-commerce platform with catalog, cart, admin, authentication, payments, and email workflows.
 - [Shivay Finance and Services](https://github.com/Jayant9917/Financial-App) — SEO-focused financial services website for home loans and related finance solutions. [Live website](https://www.shivayfinanceandservices.com/)
 - [Coursify](https://github.com/Jayant9917/coursify) — Role-based learning platform for students, instructors, and administrators.

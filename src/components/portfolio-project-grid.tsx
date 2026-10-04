@@ -142,7 +142,7 @@ export function PortfolioProjectGrid({
                   alt={project.title}
                   fill
                   sizes="(min-width: 640px) 24rem, 100vw"
-                  className={cn("project-cover", project.title === "NOVO" ? "object-contain object-center" : "object-cover object-top")}
+                  className={cn("project-cover", "object-cover object-center")}
                 />
               </Link>
 
@@ -156,14 +156,17 @@ export function PortfolioProjectGrid({
                   </div>
 
                   <div className="link-icon-row">
-                    <Link
-                      href={project.link}
-                      target="_blank"
-                      className="icon-action"
-                      aria-label={`${project.title} website`}
-                    >
-                      <Globe className="h-4 w-4" />
-                    </Link>
+                    {project.link ? (
+                      <Link
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="icon-action"
+                        aria-label={`${project.title} website`}
+                      >
+                        <Globe className="h-4 w-4" />
+                      </Link>
+                    ) : null}
                     {project.githubUrl ? (
                       <Link
                         href={project.githubUrl}

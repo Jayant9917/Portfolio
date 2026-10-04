@@ -214,11 +214,18 @@ export default async function ProjectPage({ params }: Props) {
                       href={project.deployment.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1 text-sm transition-colors hover:text-primary"
+                      className="mb-2 flex items-center gap-1 text-sm transition-colors hover:text-primary"
                     >
                       {project.deployment.platform}
                       <ExternalLink className="h-3 w-3" />
                     </a>
+                    {project.deployment.details?.length ? (
+                      <ul className="space-y-2 text-sm leading-5 text-neutral-600 dark:text-neutral-400">
+                        {project.deployment.details.map((detail) => (
+                          <li key={detail}>{detail}</li>
+                        ))}
+                      </ul>
+                    ) : null}
                   </div>
                 )}
               </div>

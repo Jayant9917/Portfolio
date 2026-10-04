@@ -4,15 +4,26 @@ const tech = (name: string, category: Technology["category"] = "other"): Technol
 
 export const projects: Project[] = [
   {
-    title: "NOVO",
-    description: "An owner-controlled Personal AI Operating System with a local desktop assistant direction and a Next.js Control Center for permissions, audit, settings, memory, documents, models, tools, and recovery.",
-    src: "/images/projects/novo.png",
-    link: "https://github.com/Jayant9917/qaz",
-    githubUrl: "https://github.com/Jayant9917/qaz",
-    technologies: [tech("Python", "backend"), tech("FastAPI", "backend"), tech("Next.js", "frontend"), tech("PostgreSQL", "database"), tech("Redis", "database"), tech("Docker", "devops"), tech("AI Systems")],
-    overview: "NOVO is an owner-controlled Personal AI Operating System. Its backend remains the authority for permissions, audit, memory, RAG, tools, model calls, and kill-switch enforcement, while the desktop assistant communicates through backend APIs.",
-    features: ["Local desktop assistant direction", "Next.js Control Center", "Permissions and audit workflows", "Memory, documents, models, and tools", "Secure backend-authoritative architecture"],
-    process: ["Defining the owner-controlled system vision", "Designing backend and control-center boundaries", "Implementing permissions, audit, and memory workflows", "Validating infrastructure and recovery paths", "Preparing the next desktop assistant milestone"],
+    title: "DocEngine",
+    description: "A distributed document-processing platform that turns header-based CSV uploads into PDFs through asynchronous jobs, with tenant isolation, object storage, and live operational monitoring.",
+    src: "/images/projects/docengine.png",
+    link: "https://docengine1.vercel.app/",
+    githubUrl: "https://github.com/Jayant9917/DocEngine",
+    deployment: {
+      platform: "Production deployment",
+      url: "https://docengine1.vercel.app/",
+      details: [
+        "Frontend: Vercel — docengine1.vercel.app",
+        "Spring Boot API and CSV-to-PDF worker: AWS EC2 with Docker Compose",
+        "RabbitMQ, Prometheus, and Grafana: AWS EC2 with Docker Compose",
+        "PostgreSQL: Supabase",
+        "Uploaded CSV files and generated PDFs: Amazon S3",
+      ],
+    },
+    technologies: [tech("React", "frontend"), tech("Spring Boot", "backend"), tech("RabbitMQ", "devops"), tech("PostgreSQL", "database"), tech("AWS S3", "devops"), tech("Docker Compose", "devops"), tech("Prometheus", "devops"), tech("Grafana", "devops")],
+    overview: "DocEngine accepts authenticated CSV uploads, stores source files in object storage, records tenant and job metadata in PostgreSQL, and hands work to RabbitMQ for asynchronous CSV-to-PDF processing. Clients can track job status and receive short-lived download links when results are ready. The deployed system includes a React frontend, Spring Boot API and worker, Supabase PostgreSQL, Amazon S3, and Prometheus/Grafana monitoring.",
+    features: ["Header-based CSV uploads with flexible columns", "Asynchronous job processing through RabbitMQ", "Tenant API-key authentication and isolated job reads", "Idempotent submissions and atomic worker job claiming", "Lease and heartbeat recovery for processing jobs", "PDF result storage with short-lived download URLs", "Prometheus metrics and Grafana dashboards"],
+    process: ["Designing API, queue, worker, database, and storage boundaries", "Implementing tenant-authenticated upload and job endpoints", "Building asynchronous CSV-to-PDF processing", "Adding idempotency, atomic claiming, and worker recovery", "Deploying the frontend and backend services with monitoring", "Smoke-testing the upload-to-download flow in production"],
     date: "2026-01-15",
   },
   {

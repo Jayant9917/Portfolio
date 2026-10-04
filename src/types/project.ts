@@ -23,5 +23,6 @@ export interface Project {
   deployment?: {
     platform: string;
     url: string;
+    details?: string[];
   };
 }
