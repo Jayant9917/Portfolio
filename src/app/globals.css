@@ -1240,6 +1240,26 @@ body {
   white-space: nowrap;
 }
 
+.blog-list-row {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.35rem;
+}
+
+.blog-list-main {
+  min-width: 0;
+}
+
+.blog-list-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.blog-list-meta {
+  align-self: flex-end;
+}
+
 .social-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1454,24 +1474,30 @@ body {
   .hero-role-row {
     width: 100%;
     align-items: start;
-    font-size: 0.8rem;
-    line-height: 1.35rem;
+    font-size: 0.92rem;
+    line-height: 1.5rem;
   }
 
   .hero-role-row-inline {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
+    font-size: clamp(0.78rem, 3.5vw, 0.92rem);
+    letter-spacing: -0.035em;
   }
 
   .hero-role-row-build {
-    display: grid;
-    grid-template-columns: max-content minmax(0, 1fr);
-    gap: 0.25rem 0.75rem;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: clamp(0.78rem, 3.5vw, 0.92rem);
+    letter-spacing: -0.035em;
   }
 
   .hero-role-row-build .hero-role-link {
     margin-left: 0;
+    white-space: nowrap;
   }
 
   .hero-role-row-build > .text-muted-foreground {
@@ -1558,19 +1584,23 @@ body {
     font-size: 0.72rem;
   }
 
-  .list-row {
+  .list-row:not(.blog-list-row) {
     grid-template-columns: 1fr;
     gap: 0.35rem;
     padding: 0.95rem 1rem;
   }
 
-  .list-row > :last-child {
+  .list-row:not(.blog-list-row) > :last-child {
     justify-self: end;
   }
 
   .list-row-title {
     font-size: 0.95rem;
     line-height: 1.45;
+  }
+
+  .blog-list-row {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .list-row-meta {

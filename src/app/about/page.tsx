@@ -3,7 +3,7 @@ import { PageHeader } from "@/components/page-header";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "About Jayant Pratap Singh, a Full Stack Developer focused on backend engineering and scalable web applications.",
+  description: "About Jayant Pratap Singh, an AI-Native Full Stack Developer building practical AI products and scalable web applications.",
 };
 
 export default function AboutPage() {
@@ -13,7 +13,7 @@ export default function AboutPage() {
         <PageHeader
           eyebrow="About"
           title="about."
-          description="I build reliable and secure web applications with a strong focus on backend engineering."
+          description="I build AI-assisted full-stack products, reliable APIs, and scalable web applications."
           meta="Product-minded engineering"
         />
 
@@ -22,8 +22,8 @@ export default function AboutPage() {
         <div className="px-4 py-6">
           <div className="hero-copy mx-auto w-full max-w-[680px]">
             <p>
-              I&apos;m Jayant Pratap Singh, a Full Stack Developer from New Delhi, India focused on backend engineering,
-              system design, databases, APIs, security, and product-minded full-stack delivery.
+              I&apos;m Jayant Pratap Singh, an AI-native Full Stack Developer based in Delhi, India. I build REST APIs,
+              database-driven applications, and event-driven systems, with a focus on backend architecture and reliable delivery.
             </p>
             <p>
               The work I enjoy most sits between product and infrastructure: designing the
@@ -31,9 +31,9 @@ export default function AboutPage() {
               until the whole system feels reliable.
             </p>
             <p>
-              I am currently deepening my expertise in backend engineering, system design,
-              distributed systems, and scalable architecture while continuing to build
-              production-grade software.
+              My recent projects explore workflow automation, distributed document processing, asynchronous workers,
+              messaging systems, and observability. I use AI assistants to move faster while reviewing generated code
+              for correctness, quality, and security.
             </p>
           </div>
         </div>

@@ -5,13 +5,13 @@ import { getAllProjects } from "@/lib/projects";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Selected projects across backend engineering, databases, security, and full-stack development.",
+  description: "Selected AI-native and full-stack projects across workflow automation, databases, and distributed systems.",
   alternates: {
     canonical: "/projects",
   },
   openGraph: {
     title: "Projects | Jayant Pratap Singh",
-    description: "Selected projects across backend engineering and full-stack development.",
+    description: "Selected AI-native and full-stack projects across workflow automation, databases, and distributed systems.",
     url: "/projects",
     type: "website",
     images: ["/opengraph-image"],
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Projects | Jayant Pratap Singh",
-    description: "Selected projects across backend engineering and full-stack development.",
+    description: "Selected AI-native and full-stack projects across workflow automation, databases, and distributed systems.",
     images: ["/opengraph-image"],
   },
 };
@@ -33,7 +33,7 @@ export default function ProjectsPage() {
         <PageHeader
           eyebrow="Projects"
           title="projects."
-          description="Backend and full-stack engineering work arranged in the same bordered showcase system as the homepage."
+          description="AI-native and full-stack applications, workflow automation, and distributed systems."
           meta={`${projects.length} selected builds`}
         />
         <PortfolioProjectGrid projects={projects} className="screen-line-top" featuredCount={projects.length} />

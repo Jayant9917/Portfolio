@@ -3,13 +3,27 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowUpRight,
+  Braces,
+  BrainCircuit,
   Clock3,
+  Cloud,
   Code2,
+  CodeXml,
+  Database,
   Github,
+  KeyRound,
+  LockKeyhole,
   Mail,
   MapPin,
+  MessageSquareText,
   NotebookPen,
+  ScanSearch,
+  Server,
+  ShieldCheck,
   Sparkles,
+  Webhook,
+  Workflow,
+  type LucideIcon,
 } from "lucide-react";
 import {
   IconBrandOpenai,
@@ -25,22 +39,33 @@ import {
   siGit,
   siGooglegemini,
   siGithub,
+  siGrafana,
   siHtml5,
   siJavascript,
+  siLetsencrypt,
   siMongodb,
   siMysql,
   siNextdotjs,
   siNodedotjs,
   siNginx,
+  siNetlify,
+  siOwasp,
   siPostgresql,
+  siPostman,
+  siPrisma,
+  siPrometheus,
   siPython,
+  siRabbitmq,
   siReact,
+  siReactrouter,
   siRedis,
   siShadcnui,
+  siSpringboot,
   siTailwindcss,
   siTypescript,
   siVercel,
   siZap,
+  siApachekafka,
   type SimpleIcon,
 } from "simple-icons";
 import { GitHubActivityCard } from "@/components/github-activity-card";
@@ -68,6 +93,7 @@ type BlogPost = Omit<MDXFile, "frontmatter"> & {
 type StackIcon =
   | { type: "simple"; icon: SimpleIcon }
   | { type: "tabler"; icon: TablerIcon }
+  | { type: "lucide"; icon: LucideIcon }
   | { type: "badge"; label: string };
 
 type StackItem = {
@@ -77,27 +103,31 @@ type StackItem = {
 
 const simpleIcon = (icon: SimpleIcon): StackIcon => ({ type: "simple", icon });
 const tablerIcon = (icon: TablerIcon): StackIcon => ({ type: "tabler", icon });
+const lucideIcon = (icon: LucideIcon): StackIcon => ({ type: "lucide", icon });
 const badgeIcon = (label: string): StackIcon => ({ type: "badge", label });
 
 const techStack: { label: string; items: StackItem[] }[] = [
   { label: "Languages", items: [
     { label: "JavaScript", icon: simpleIcon(siJavascript) }, { label: "TypeScript", icon: simpleIcon(siTypescript) },
-    { label: "Python", icon: simpleIcon(siPython) }, { label: "SQL", icon: badgeIcon("SQL") },
+    { label: "Python", icon: simpleIcon(siPython) }, { label: "Java", icon: lucideIcon(Code2) }, { label: "SQL", icon: lucideIcon(Database) },
   ] },
   { label: "Frontend", items: [
     { label: "React.js", icon: simpleIcon(siReact) }, { label: "Next.js", icon: simpleIcon(siNextdotjs) },
-    { label: "Tailwind CSS", icon: simpleIcon(siTailwindcss) }, { label: "HTML", icon: simpleIcon(siHtml5) }, { label: "CSS", icon: simpleIcon(siCss) }, { label: "shadcn/ui", icon: simpleIcon(siShadcnui) }, { label: "React Bits", icon: badgeIcon("RB") },
+    { label: "Tailwind CSS", icon: simpleIcon(siTailwindcss) }, { label: "HTML5", icon: simpleIcon(siHtml5) }, { label: "CSS3", icon: simpleIcon(siCss) }, { label: "shadcn/ui", icon: simpleIcon(siShadcnui) }, { label: "React Router", icon: simpleIcon(siReactrouter) }, { label: "Context API", icon: lucideIcon(Workflow) },
   ] },
   { label: "Backend & Databases", items: [
-    { label: "Node.js", icon: simpleIcon(siNodedotjs) }, { label: "Express.js", icon: simpleIcon(siExpress) },
+    { label: "Node.js", icon: simpleIcon(siNodedotjs) }, { label: "Express.js", icon: simpleIcon(siExpress) }, { label: "Spring Boot", icon: simpleIcon(siSpringboot) },
     { label: "PostgreSQL", icon: simpleIcon(siPostgresql) }, { label: "MongoDB", icon: simpleIcon(siMongodb) },
-    { label: "MySQL", icon: simpleIcon(siMysql) }, { label: "REST APIs", icon: badgeIcon("API") }, { label: "Redis", icon: simpleIcon(siRedis) }, { label: "nginx", icon: simpleIcon(siNginx) },
+    { label: "MySQL", icon: simpleIcon(siMysql) }, { label: "REST APIs", icon: lucideIcon(Braces) }, { label: "Webhooks", icon: lucideIcon(Webhook) }, { label: "Authentication & Authorization", icon: lucideIcon(ShieldCheck) }, { label: "Prisma", icon: simpleIcon(siPrisma) }, { label: "Kafka", icon: simpleIcon(siApachekafka) }, { label: "RabbitMQ", icon: simpleIcon(siRabbitmq) }, { label: "Redis", icon: simpleIcon(siRedis) }, { label: "nginx", icon: simpleIcon(siNginx) },
   ] },
   { label: "Infrastructure & Security", items: [
-    { label: "Docker", icon: simpleIcon(siDocker) }, { label: "Microsoft IIS", icon: badgeIcon("IIS") },
-    { label: "HTTPS", icon: badgeIcon("WEB") }, { label: "TLS", icon: badgeIcon("SEC") }, { label: "SSL/TLS", icon: badgeIcon("CERT") },
-    { label: "OWASP ZAP", icon: simpleIcon(siZap) }, { label: "Burp Suite", icon: simpleIcon(siBurpsuite) }, { label: "Nmap", icon: badgeIcon("NMAP") },
+    { label: "Docker", icon: simpleIcon(siDocker) }, { label: "AWS", icon: lucideIcon(Cloud) }, { label: "Microsoft IIS", icon: lucideIcon(Server) }, { label: "Vercel", icon: simpleIcon(siVercel) }, { label: "Netlify", icon: simpleIcon(siNetlify) },
+    { label: "HTTPS", icon: lucideIcon(LockKeyhole) }, { label: "TLS", icon: simpleIcon(siLetsencrypt) }, { label: "SSL/TLS", icon: simpleIcon(siLetsencrypt) },
+    { label: "OWASP ZAP", icon: simpleIcon(siOwasp) }, { label: "Burp Suite", icon: simpleIcon(siBurpsuite) }, { label: "Nmap", icon: lucideIcon(ScanSearch) }, { label: "Prometheus", icon: simpleIcon(siPrometheus) }, { label: "Grafana", icon: simpleIcon(siGrafana) },
     { label: "Git", icon: simpleIcon(siGit) }, { label: "GitHub", icon: simpleIcon(siGithub) },
+  ] },
+  { label: "AI Engineering & Tools", items: [
+    { label: "AI Agents", icon: lucideIcon(BrainCircuit) }, { label: "Generative AI", icon: simpleIcon(siGooglegemini) }, { label: "Prompt Engineering", icon: lucideIcon(MessageSquareText) }, { label: "AI Workflows", icon: lucideIcon(Workflow) }, { label: "Context Engineering", icon: lucideIcon(KeyRound) }, { label: "Postman", icon: simpleIcon(siPostman) }, { label: "VS Code", icon: lucideIcon(CodeXml) },
   ] },
   { label: "Workflow & AI", items: [
     { label: "Cursor", icon: simpleIcon(siCursor) }, { label: "Claude", icon: simpleIcon(siClaude) },
@@ -108,13 +138,13 @@ const techStack: { label: string; items: StackItem[] }[] = [
 const experiences: ExperienceItemType[] = [
   { id: "nirnaya", companyName: "Nirnaya", isCurrentEmployer: true, positions: [{
     id: "nirnaya-full-stack", title: "Full Stack Engineer", employmentType: "Full-time", employmentPeriod: { start: "10.2025" },
-    description: "Building and maintaining production-grade web applications across the frontend, backend, database, security, and deployment layers.\n\n- Developed and maintained production web applications using React.js, TypeScript, Node.js, Express.js, and PostgreSQL.\n- Designed and integrated REST APIs supporting core application workflows and frontend functionality.\n- Designed and managed relational database systems, including schema design, normalization, migrations, complex SQL queries, and database maintenance.\n- Implemented secure handling of sensitive data, including encryption and decryption of personally identifiable information stored in databases.\n- Deployed and maintained production applications using Microsoft IIS, including HTTPS and SSL/TLS configuration.\n- Applied web application security practices including input validation, SQL injection prevention, Content Security Policy, CSRF protection, and secure HTTP headers.\n- Performed security testing and vulnerability assessment using OWASP ZAP, Burp Suite, and Nmap.\n- Investigated and resolved production issues across frontend, backend, database, and deployment environments.\n- Collaborated with teams to understand requirements, troubleshoot technical issues, and deliver reliable software solutions.",
-    skills: ["React.js", "TypeScript", "Node.js", "Express.js", "PostgreSQL", "REST APIs", "Microsoft IIS", "HTTPS", "TLS", "SSL/TLS", "Web Application Security", "OWASP ZAP", "Burp Suite", "Nmap", "Git"],
+    description: "Building secure internal web platforms that digitize operational workflows, replacing manual processes with role-based dashboards for real-time visibility.\n\n- Designed and shipped REST APIs and normalized database schemas for secure data exchange between modules, with query optimization for fast dashboards.\n- Use AI coding assistants to accelerate delivery, explore codebases, and debug while reviewing outputs for correctness, quality, and security.",
+    skills: ["React.js", "TypeScript", "Node.js", "Express.js", "PostgreSQL", "REST APIs", "Database Design", "Query Optimization", "RBAC", "AI Coding Assistants"],
   }] },
   { id: "upsala-defsol", companyName: "UPSALA DEFSOL", positions: [{
     id: "upsala-defsol-full-stack", title: "Full Stack Developer", employmentType: "Full-time", employmentPeriod: { start: "08.2025", end: "10.2025" },
-    description: "Worked on full-stack web applications using the MERN stack, contributing to frontend development, backend APIs, database operations, and application maintenance.\n\n- Developed and maintained web applications using JavaScript, React.js, Node.js, Express.js, and MongoDB.\n- Designed and integrated REST APIs to support application workflows and frontend functionality.\n- Worked with MongoDB databases, including schema design, CRUD operations, queries, and data management.\n- Investigated and resolved production issues while improving application reliability and maintainability.\n- Collaborated with cross-functional teams to understand requirements and deliver software solutions.",
-    skills: ["JavaScript", "React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "Git"],
+    description: "Built modular full-stack web applications with reusable components and clean separation between frontend, API, and data layers.\n\n- Designed REST APIs with CRUD operations, authentication, authorization, and role-based access control.\n- Debugged production issues and improved reliability through better error handling.",
+    skills: ["JavaScript", "React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "Authentication", "Authorization", "RBAC"],
   }] },
 ];
 const socialLinks = [
@@ -191,7 +221,7 @@ export default async function Home() {
                 <h1 className="hero-stage-name">Jayant Pratap Singh</h1>
               </div>
               <div className="hero-stage-subline">
-                Full Stack Developer. Backend-Focused Engineer.
+                AI-Native Full Stack Developer.
               </div>
             </div>
           </div>
@@ -210,23 +240,10 @@ export default async function Home() {
                   @Jayant9917
                 </Link>
               </div>
-              <div className="hero-role-row hero-role-row-build">
-                <span className="hero-role-label">Positioning</span>
-                <Link
-                  href="https://github.com/Jayant9917"
-                  target="_blank"
-                  className="hero-role-link"
-                >
-                  Backend Engineering
-                </Link>
-                <span className="text-muted-foreground text-sm leading-6">
-                  Building scalable and secure web applications.
-                </span>
-              </div>
               <p className="text-muted-foreground max-w-2xl text-sm leading-6">
-                I build full-stack software with a strong bias toward practical
-                AI systems, retrieval workflows, and interfaces that feel clear
-                and human.
+                I build full-stack applications with AI-assisted workflows,
+                reliable APIs, and event-driven systems using Node.js,
+                TypeScript, and PostgreSQL.
               </p>
             </div>
 
@@ -315,13 +332,13 @@ export default async function Home() {
         <div className="section-bar screen-line-top screen-line-bottom">
           <h2 className="section-title">Projects</h2>
           <span className="mono-note">
-            Selected projects across backend engineering and full-stack development.
+            Selected projects across AI-native, full-stack, and event-driven development.
           </span>
         </div>
         <div className="section-copy">
           Building systems. Learning continuously.
         </div>
-        <PortfolioProjectGrid projects={projects} />
+        <PortfolioProjectGrid projects={projects} featuredCount={4} />
         <div className="screen-line-top flex justify-center p-4">
           <Link
             href="/projects"
@@ -339,7 +356,7 @@ export default async function Home() {
         <div className="section-bar screen-line-top screen-line-bottom">
           <h2 className="section-title">Blog</h2>
           <span className="mono-note">
-            Notes on backend engineering, AI systems, databases, and software development.
+            Notes on AI systems, full-stack development, databases, and software engineering.
           </span>
         </div>
         <div className="list-grid">
@@ -349,13 +366,17 @@ export default async function Home() {
               href={post.frontmatter.externalUrl ?? `/blog/${post.slug}`}
               target={post.frontmatter.externalUrl ? "_blank" : undefined}
               rel={post.frontmatter.externalUrl ? "noreferrer" : undefined}
-              className="screen-line-bottom list-row"
+              className="screen-line-bottom list-row blog-list-row"
             >
-              <div className="flex items-start gap-3">
-                <NotebookPen className="text-muted-foreground mt-1 h-4 w-4" />
-                <span className="list-row-title">{post.frontmatter.title}</span>
+              <div className="blog-list-main flex items-start gap-3">
+                <NotebookPen className="text-muted-foreground mt-1 size-4 shrink-0" />
+                <div className="blog-list-copy">
+                  <span className="list-row-title">{post.frontmatter.title}</span>
+                  <span className="list-row-meta blog-list-meta">
+                    {formatReadMeta(post)}
+                  </span>
+                </div>
               </div>
-              <span className="list-row-meta">{formatReadMeta(post)}</span>
             </Link>
           ))}
         </div>
@@ -376,12 +397,15 @@ export default async function Home() {
         <div className="section-bar screen-line-top screen-line-bottom">
           <h2 className="section-title">Experience</h2>
           <span className="mono-note">
-            Structured using the same grouped work-experience component pattern.
+            Full-stack development · 2025 — Present
           </span>
         </div>
         <div className="section-copy">
-          Real roles, grouped by company, with expandable detail, tech tags, and
-          auto-calculated duration from employment dates.
+          I build full-stack applications, secure APIs, and data systems. At
+          Nirnaya, I develop role-based platforms for operational workflows; at
+          UPSALA DEFSOL, I built modular applications and authenticated APIs.
+          My toolkit includes React, Node.js, TypeScript, PostgreSQL, MongoDB,
+          and AI-assisted development.
         </div>
         <WorkExperience
           experiences={experiences}
@@ -437,6 +461,12 @@ function StackLogo({
     const Icon = icon.icon;
 
     return <Icon className={className} aria-hidden stroke={1.9} />;
+  }
+
+  if (icon.type === "lucide") {
+    const Icon = icon.icon;
+
+    return <Icon className={className} aria-hidden strokeWidth={1.9} />;
   }
 
   return (

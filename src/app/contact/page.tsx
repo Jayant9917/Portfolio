@@ -6,14 +6,14 @@ import { ArrowUpRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Jayant Pratap Singh for Full Stack Developer and backend engineering opportunities.",
+    "Contact Jayant Pratap Singh for AI-Native Full Stack Developer opportunities and collaborations.",
   alternates: {
     canonical: "/contact",
   },
   openGraph: {
     title: "Contact | Jayant Pratap Singh",
     description:
-      "Reach Jayant Pratap Singh for Full Stack Developer roles, backend engineering work, and collaboration.",
+      "Reach Jayant Pratap Singh for AI-Native Full Stack Developer roles and collaboration.",
     url: "/contact",
     type: "website",
     images: ["/opengraph-image"],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact | Jayant Pratap Singh",
     description:
-      "Reach Jayant Pratap Singh for Full Stack Developer roles, backend engineering work, and collaboration.",
+      "Reach Jayant Pratap Singh for AI-Native Full Stack Developer roles and collaboration.",
     images: ["/opengraph-image"],
   },
 };
@@ -34,7 +34,7 @@ export default function ContactPage() {
         <PageHeader
           eyebrow="Contact"
           title="contact."
-          description="Interested in building something meaningful? Reach out about Full Stack Developer and backend engineering opportunities."
+          description="Interested in building something meaningful? Reach out about AI-Native Full Stack Developer opportunities and collaborations."
           meta="Open to thoughtful work"
         />
         <div className="relative left-1/2 w-screen -translate-x-1/2 border-t border-[#e7e7e7] dark:border-[#1c1c1c]" />

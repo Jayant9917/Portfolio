@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "Jayant Pratap Singh - Full Stack Developer | Backend-Focused Engineer";
+export const alt = "Jayant Pratap Singh - AI-Native Full Stack Developer";
 export const size = {
   width: 1200,
   height: 630,
@@ -57,7 +57,7 @@ export default function Image() {
               lineHeight: 0.96,
             }}
           >
-            <span>Full Stack Developer</span>
+            <span>AI-Native Full Stack</span>
             <span>building AI tools</span>
             <span>and products</span>
           </div>
@@ -82,7 +82,7 @@ export default function Image() {
           >
             <span>github.com/Jayant9917</span>
             <span>·</span>
-            <span>Full Stack Developer from India</span>
+            <span>Developer from India</span>
           </div>
         </div>
       </div>

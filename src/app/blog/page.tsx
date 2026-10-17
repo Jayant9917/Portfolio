@@ -16,7 +16,7 @@ interface BlogPost {
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Notes on backend engineering, AI systems, databases, and software development.",
+  description: "Notes on AI systems, full-stack development, databases, and software engineering.",
 };
 
 export default async function BlogPage() {
@@ -35,7 +35,7 @@ export default async function BlogPage() {
         <PageHeader
           eyebrow="Blog"
           title="blog."
-          description="Notes on backend engineering, AI systems, databases, and software development."
+          description="Notes on AI systems, full-stack development, databases, and software engineering."
           meta={`${posts.length} posts`}
         />
 

@@ -27,7 +27,7 @@ const instrumentSerif = Instrument_Serif({
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://github.com/Jayant9917";
 const siteTitle = "Jayant Pratap Singh";
 const siteDescription =
-  "Full Stack Developer from New Delhi, India focused on backend engineering, secure APIs, databases, and scalable web applications.";
+  "AI-Native Full Stack Developer from Delhi, India building AI-assisted products, reliable APIs, and scalable web applications.";
 
 export const viewport: Viewport = {
   themeColor: [
@@ -42,11 +42,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   applicationName: siteTitle,
   title: {
-    default: "Jayant Pratap Singh | Full Stack Developer | Backend-Focused Engineer",
+    default: "Jayant Pratap Singh | AI-Native Full Stack Developer",
     template: "%s | Jayant Pratap Singh",
   },
   description: siteDescription,
-  keywords: ["Jayant Pratap Singh", "Full Stack Developer India", "Backend Engineering", "Node.js", "TypeScript", "PostgreSQL", "MongoDB"],
+  keywords: ["Jayant Pratap Singh", "AI-Native Full Stack Developer India", "AI Engineering", "Node.js", "TypeScript", "PostgreSQL", "MongoDB"],
   authors: [{ name: "Jayant Pratap Singh", url: siteUrl }],
   creator: "Jayant Pratap Singh",
   publisher: "Jayant Pratap Singh",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
   },
   openGraph: {
-    title: "Jayant Pratap Singh | Full Stack Developer | Backend-Focused Engineer",
+    title: "Jayant Pratap Singh | AI-Native Full Stack Developer",
     description: siteDescription,
     url: siteUrl,
     siteName: siteTitle,
@@ -67,13 +67,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Jayant Pratap Singh - Full Stack Developer | Backend-Focused Engineer",
+        alt: "Jayant Pratap Singh - AI-Native Full Stack Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jayant Pratap Singh | Full Stack Developer | Backend-Focused Engineer",
+    title: "Jayant Pratap Singh | AI-Native Full Stack Developer",
     description: siteDescription,
     creator: "@Jayant9917",
     images: ["/opengraph-image"],

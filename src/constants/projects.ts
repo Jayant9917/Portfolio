@@ -4,6 +4,18 @@ const tech = (name: string, category: Technology["category"] = "other"): Technol
 
 export const projects: Project[] = [
   {
+    title: "Zapier Automation Platform",
+    description: "An event-driven workflow automation platform for building trigger-action workflows across services, powered by Kafka, webhooks, and independently deployable services.",
+    src: "/images/projects/zapier-placeholder.svg",
+    link: "https://github.com/Jayant9917",
+    githubUrl: "https://github.com/Jayant9917",
+    technologies: [tech("Next.js", "frontend"), tech("Node.js", "backend"), tech("Express.js", "backend"), tech("PostgreSQL", "database"), tech("Kafka", "devops"), tech("Prisma", "database"), tech("Webhooks", "backend")],
+    overview: "A workflow automation platform built around trigger-action workflows across services. Event-driven processing uses Kafka, webhooks, and the Outbox Pattern to support reliable execution, with separate services for API management, webhook ingestion, event processing, and action execution.",
+    features: ["Trigger-action workflow design", "Kafka-based event processing", "Webhook ingestion", "Outbox Pattern for reliable event delivery", "Separate API, ingestion, processing, and execution services"],
+    process: ["Designed the workflow and service boundaries", "Implemented webhook ingestion and event processing", "Connected asynchronous workflow execution with Kafka", "Used the Outbox Pattern to improve delivery reliability"],
+    date: "2026-10-18",
+  },
+  {
     title: "DocEngine",
     description: "A distributed document-processing platform that turns header-based CSV uploads into PDFs through asynchronous jobs, with tenant isolation, object storage, and live operational monitoring.",
     src: "/images/projects/docengine.png",
@@ -53,7 +65,7 @@ export const projects: Project[] = [
   {
     title: "Coursify",
     description: "A role-based online learning platform that brings together course discovery, student learning tools, instructor publishing workflows, and admin platform oversight.",
-    src: "/images/projects/coursify.png",
+    src: "/images/projects/coursify-placeholder.svg",
     link: "https://coursify-frontend-f90i.onrender.com/",
     githubUrl: "https://github.com/Jayant9917/coursify",
     technologies: [tech("React", "frontend"), tech("Node.js", "backend"), tech("Express.js", "backend"), tech("MongoDB", "database"), tech("Cloudinary", "devops"), tech("JWT", "backend"), tech("Role-Based Access")],

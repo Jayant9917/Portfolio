@@ -1,0 +1,16 @@
+---
+title: "Logout Is Not a Button. It’s a Security Operation."
+description: "Why production logout means revoking sessions, clearing credentials, and handling the security edge cases beyond a simple redirect."
+date: "2026-07-28"
+author: "Jay Rana"
+category: "Security"
+readTime: "6 min read"
+externalUrl: "https://medium.com/@ranajayant527/logout-is-not-a-button-its-a-security-operation-e545962bb4a5"
+tags: ["Authentication", "JWT", "Web Security", "Sessions"]
+---
+
+Logout can look deceptively simple: clear a token and send the user to a login page. In production, a secure logout also needs to make the server reject the session, clear authentication cookies and sensitive client state, and account for expired tokens, pending requests, and browser history.
+
+In this article, I explain why logout deserves the same engineering care as login and walk through the details that help end a session safely.
+
+[Read the full article on Medium](https://medium.com/@ranajayant527/logout-is-not-a-button-its-a-security-operation-e545962bb4a5)

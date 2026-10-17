@@ -17,10 +17,10 @@ export default function TimelinePage() {
   const timelineItems: TimelineItem[] = [
     {
       id: 1,
-      year: "2026",
+      year: "2025 - Present",
       title: "Full Stack Developer",
       company: "Nirnaya",
-      description: "Built secure internal web platforms and production dashboards for operational workflows.",
+      description: "Building secure internal platforms that digitize operational workflows, with role-based dashboards, REST APIs, and optimized database schemas.",
       date: "Oct 2025 - Present",
       location: "New Delhi",
       type: 'work'
@@ -28,51 +28,21 @@ export default function TimelinePage() {
     {
       id: 2,
       year: "2025",
-      title: "MERN Stack Developer",
+      title: "Full Stack Developer",
       company: "UPSALA DEFSOL",
-      description: "Built modular client-facing applications and worked across UI, APIs, and deployment flows.",
+      description: "Built modular full-stack applications, designed authenticated REST APIs, and improved reliability through production debugging and error handling.",
       date: "Aug 2025 - Oct 2025",
       location: "Indore, MP",
       type: 'work'
     },
     {
       id: 3,
-      year: "2024",
-      title: "Full Stack Developer",
-      company: "UPSALA DEFSOL",
-      description: "Shipped e-commerce and product features with a focus on performance, UX, and delivery.",
-      date: "Oct 2024 - Mar 2025",
-      location: "Remote",
-      type: 'work'
-    },
-    {
-      id: 4,
-      year: "2020 - 2024",
+      year: "2021 - 2025",
       title: "B.Tech in Information Technology",
-      company: "University Institute of Technology, RGPV Bhopal",
-      description: "Built the foundations in data structures, algorithms, web development, and databases.",
-      date: "2020 - 2024",
-      location: "Bhopal, MP",
-      type: 'education',
-    },
-    {
-      id: 5,
-      year: "2018 - 2020",
-      title: "Higher Secondary (12th)",
-      company: "Scholars Public Higher Secondary School - MP Board",
-      description: "Science stream with Physics, Chemistry, and Mathematics.",
-      date: "2018 - 2020",
-      location: "Indore, MP",
-      type: 'education',
-    },
-    {
-      id: 6,
-      year: "2017 - 2018",
-      title: "High School (10th)",
-      company: "Rani Laxmi Bai Public Academy High School - MP Board",
-      description: "Built the base for everything that came later.",
-      date: "2017 - 2018",
-      location: "Indore, MP",
+      company: "College of Engineering Roorkee",
+      description: "Bachelor of Technology in Information Technology.",
+      date: "2021 - 2025",
+      location: "Roorkee, India",
       type: 'education',
     }
   ];
@@ -92,15 +62,6 @@ export default function TimelinePage() {
         <p className="max-w-2xl text-sm leading-7 text-neutral-600 dark:text-neutral-400">
           {item.description}
         </p>
-        {item.type === 'education' && item.year === "2020 - 2024" ? (
-          <p className="text-sm text-neutral-500 dark:text-neutral-400">7.15 CGPA</p>
-        ) : null}
-        {item.type === 'education' && item.year === "2018 - 2020" ? (
-          <p className="text-sm text-neutral-500 dark:text-neutral-400">80%</p>
-        ) : null}
-        {item.type === 'education' && item.year === "2017 - 2018" ? (
-          <p className="text-sm text-neutral-500 dark:text-neutral-400">91.4%</p>
-        ) : null}
       </div>
     )
   }));
