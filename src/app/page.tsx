@@ -64,7 +64,6 @@ import {
   siTailwindcss,
   siTypescript,
   siVercel,
-  siZap,
   siApachekafka,
   type SimpleIcon,
 } from "simple-icons";
@@ -93,8 +92,7 @@ type BlogPost = Omit<MDXFile, "frontmatter"> & {
 type StackIcon =
   | { type: "simple"; icon: SimpleIcon }
   | { type: "tabler"; icon: TablerIcon }
-  | { type: "lucide"; icon: LucideIcon }
-  | { type: "badge"; label: string };
+  | { type: "lucide"; icon: LucideIcon };
 
 type StackItem = {
   label: string;
@@ -104,7 +102,6 @@ type StackItem = {
 const simpleIcon = (icon: SimpleIcon): StackIcon => ({ type: "simple", icon });
 const tablerIcon = (icon: TablerIcon): StackIcon => ({ type: "tabler", icon });
 const lucideIcon = (icon: LucideIcon): StackIcon => ({ type: "lucide", icon });
-const badgeIcon = (label: string): StackIcon => ({ type: "badge", label });
 
 const techStack: { label: string; items: StackItem[] }[] = [
   { label: "Languages", items: [
@@ -449,14 +446,6 @@ function StackLogo({
   icon: StackIcon;
   className?: string;
 }) {
-  if (icon.type === "badge") {
-    return (
-      <span className={`${className ?? ""} stack-chip-badge`} aria-hidden>
-        {icon.label}
-      </span>
-    );
-  }
-
   if (icon.type === "tabler") {
     const Icon = icon.icon;
 
