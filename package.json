@@ -2,6 +2,9 @@
   "name": "jay-rana-portfolio",
   "version": "0.1.0",
   "private": true,
+  "allowScripts": {
+    "@tailwindcss/oxide@4.1.8": true
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
